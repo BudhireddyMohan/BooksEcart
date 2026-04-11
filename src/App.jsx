@@ -9,7 +9,7 @@ import Cartpage from './Compounds/Cartpage';
 import Mainpage from './Compounds/Mainpage';
 import Navbar from './Compounds/Navbar';
 import { createContext } from 'react';
-
+import UseEffect from './Useeffect/UseEffect';
 
 
 export const cartdata=createContext();
@@ -26,6 +26,7 @@ const [cart,setcart]=useState([]);
 console.log(isloggined)
   return (
     <>
+      <UseEffect/>
     <cartdata.Provider value={[cart,setcart]}>
      <Routes>
 <Route 

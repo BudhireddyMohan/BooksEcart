@@ -1,12 +1,29 @@
 import React from 'react'
-import { books } from './data'
 import { useNavigate } from 'react-router-dom'
 import { useContext } from 'react'
 import { cartdata } from '../App'
+import { useEffect } from 'react'
+import { useState } from 'react'
+
 
 const MainPagebooks = () => {
 const navg=useNavigate();
 const [cart,setcart]=useContext(cartdata);
+const[books,setbooks]=useState([{id:"",name:"",image:""}])
+
+
+useEffect(()=>{
+    setbooks([ {
+    id: 1,
+    name: "React Basics",
+    image: "/bookimg.webp"
+  },
+  {
+    id: 2,
+    name: "JavaScript Guide",
+    image: "/bookimg.webp"
+  }])
+},[])
 
   return (
     <div>
